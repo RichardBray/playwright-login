@@ -4,8 +4,10 @@ let emailInput;
 let passwordInput;
 let submitButton;
 
+const SITE_URL = 'https://playwright-login.vercel.app/';
+
 test.beforeEach(async ({ page }) => {
-  await page.goto('http://localhost:5173/');
+  await page.goto(SITE_URL);
   emailInput = await page.getByRole('textbox', { name: 'Email' });
   passwordInput = await page.getByRole('textbox', { name: 'Password' });
   submitButton = await page.getByRole('button', { name: 'Login' });
@@ -24,5 +26,5 @@ test('Login form submission works', async ({ page }) => {
   passwordInput.fill('password123');
   submitButton.click();
 
-  await expect(page).toHaveURL('http://localhost:5173/dashboard');
+  await expect(page).toHaveURL(`${SITE_URL}dashboard`);
 });
