@@ -4,7 +4,7 @@ let emailInput;
 let passwordInput;
 let submitButton;
 
-const SITE_URL = 'https://playwright-login.vercel.app/';
+const SITE_URL = 'http://localhost:5173/';
 
 test.beforeEach(async ({ page }) => {
   await page.goto(SITE_URL);
