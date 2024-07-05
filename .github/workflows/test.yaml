@@ -1,0 +1,19 @@
+name: Run Playwright Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build: #can be anything you want
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - run: bun i
+      - run: bunx playwright install --with-deps
+      - run: bunx playwright test
