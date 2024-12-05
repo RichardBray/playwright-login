@@ -23,18 +23,16 @@ export function Login() {
           <div className="space-y-2">
             <div className="flex items-center">
               <Label htmlFor="password">Password</Label>
-              <a className="ml-auto inline-block text-sm underline" href="#">
+              <a className="ml-auto inline-block text-sm underline" href="#" required>
                 Forgot your password?
               </a>
             </div>
             <Input id="password" required type="password" />
           </div>
           <div className="space-y-2">
-            <Link to="/dashboard">
-              <Button className="w-full" type="submit">
-                Login
-              </Button>
-            </Link>
+            <Button className="w-full" type="submit">
+              Login
+            </Button>
           </div>
         </div>
         <div className="mt-4 text-center text-sm">
