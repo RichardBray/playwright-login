@@ -30,11 +30,9 @@ export function Login() {
             <Input id="password" required type="password" />
           </div>
           <div className="space-y-2">
-            <Link to="/dashboard">
               <Button className="w-full" type="submit">
                 Login
               </Button>
-            </Link>
           </div>
         </div>
         <div className="mt-4 text-center text-sm">
